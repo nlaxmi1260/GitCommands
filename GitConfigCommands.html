@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Config Commands</title>
+    <style>
+        body {
+            font-size: large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            line-height: 1.5;
+            text-align: justify;
+            }
+    </style>
+</head>
+<body>
+    <h1>Git Config Commands </h1>
+    <p>Git can be configured at system level ,globally and locally. Following commands are used to configure git user globally for Mac</p>
+    <table border="1">
+        <thead>
+            <th>Command</th>
+            <th>Description</th>
+        </thead>
+        <tr>
+            <td>$ git config --global user.name "nlaxmi1260"</td>
+            <td>This command is used to configure git user name globally</td>
+        </tr>
+        <tr>
+            <td>$ git config --global user.email "yaram.nlaxmi@gmail.com"</td>
+            <td>This command is used to configure git user email globally</td>
+        </tr>
+        <tr>
+            <td>$ ssh-keygen -t ed25519 -C "yaram.nlaxmi@gmail.com" </td>
+            <td>This command is used to generate ssh private and public key. It will ask for name -lakshmi,and ask for passcode just enter enter .It will generate public and private keys </td>
+        </tr>
+        <tr>
+            <td>$ touch ~/.ssh/config</td>
+            <td>This command will create config file under ~/.ssh folder </td>
+        </tr>
+        <tr>
+            <td>$ vi ~/.ssh/config </td>
+            <td> This command will open config file in vi editor. copy below code in insert mode and save the file. <br>
+            <code>
+                Host github.com <br>
+                 AddKeysToAgent yes <br>
+                 UseKeychain yes <br>
+                 IdentityFile ~/.ssh/lakshmi <br>
+            </code>
+            </td>
+        </tr>
+        <tr>
+            <td>$ pbcopy < ~/.ssh/lakshmi.pub </td>
+            <td>This command will copy the public key into clipboard.</td>
+        </tr>
+        <tr>
+            <td>In browser login to github.com , goto settings -> ssh and gpg keys ->click on new sshkey -> paste publickey -> give name </td>
+            <td>This activity will save the ssh publickey</td>
+        </tr>
+    </table>
+</body>
+</html>
