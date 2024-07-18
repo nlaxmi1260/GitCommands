@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitFaqs</title>
+  </head>
+  <body>
+    <div>
+      <h2>Gitfaqs and git commands</h2>
+      <ol>
+        some of the git faqs
+        <li>write calculator.sh - <b>vim calculator.sh</b></li>
+        <li>
+          how to create or initialize a git repo through cli - <b>git init</b>
+        </li>
+        <li>how to see list of hidden files - <b>ls -a</b></li>
+        <li>
+          use of .git folder -it is resposible to tracking,loging every thing we
+          have done locally
+        </li>
+        <li>
+          use of hook file in .git folder ? -sometimes developers unintensinally
+          push the passwords into git then hooks will stop it
+        </li>
+        <li><b> git status</b> - shows what changes happned in the git</li>
+        <li>
+          once we install .git,.git itself doesnot do anything after we did
+          <b> git add filename </b> then only git will track the file.
+        </li>
+        <li>
+          changes to be commited means changes have to save with a message which
+          shows who made changes and what changes have done
+          <b> git commit -m "what changes have done" </b>
+        </li>
+        <li>
+          <b>git diff filename</b> - shows the difference between existing and
+          previous versions
+        </li>
+        <li>
+          <b> git checkout filename</b> - to delete the changes of last process
+          and continuee with previous commit
+        </li>
+        <li><b>git log </b> - shows different file commit ids</li>
+
+        <li>
+          what is the git workflow you used in your organization? -
+          <b> git add && git commit -m "" && git push</b>
+        </li>
+        <li>
+          <b>To push code from local mechine to github </b>
+          <ol>
+            we create git repo and push to the github location
+            <li>
+              <b>git push</b> - all the local data is pushed to github but here
+              we create repo locally and we dinot gave remote location
+            </li>
+            <li>
+              <b> ** git remote add origin remoteLocation</b> -to add localrepo
+              to the github
+            </li>
+            <li>
+              <b> rm -rf .git</b> - if we want to remove the .git folder in our
+              local machine
+            </li>
+          </ol>
+        </li>
+        <li>
+          <b> git clone or pull code from github to local macine </b>
+          <ol>
+            git clone means clone the code from github to localmechine
+            <li>
+              in the remote repository go to code option select <b> ssh</b> copy
+              the url
+              <ol>
+                option to download either in
+                <b> ssh,cli,https</b>
+                <li>
+                  https - <b> git clone https url </b> to clone to localrepo
+                  <ol>
+                    it will ask github passwords
+                    <li>we have to give and authenticate</li>
+                  </ol>
+                </li>
+                <li>
+                  ssh -authenticate with public key
+                  <ol>
+                    to generate a public key in cmd
+                    <li><b>ssh -keygen -t rsa</b></li>
+                    <li>
+                      go to github accout ->settings ->ssh and gps keys ->paste
+                      the publickey ->give a name
+                    </li>
+                    <li>it will clone the remoterepo</li>
+                  </ol>
+                </li>
+                <li>cli</li>
+              </ol>
+            </li>
+            <li>
+              in cli <b> git clone urlOfTheRepo </b> - from remoterepository is
+              downloaded in the local mechine
+            </li>
+            <li><b> git remote -v</b> shows the remote reference of repo</li>
+            <li>
+              what is the difference between git clone and git fork?
+              <ol>
+                git is a distibuted system that can be done using forking
+                mechanism
+                <li>
+                  git clone : to download the repo from remote to local machine
+                </li>
+                <li>
+                  git fork: fork is used to copy repository but it will not
+                  updated
+                </li>
+              </ol>
+            </li>
+            <li>
+              how to add new feature to the git?
+              <ol>
+                <li>to create new branch - <b> git branch branchName </b></li>
+                <li>
+                  to change from one branch to other brach -
+                  <b> git checkout branchnameToWhichBranchToGo</b>
+                </li>
+                <li>
+                  to create and checkout to that branch -
+                  <b>
+                    git chekout -b branchname [creates new branch and clone
+                    existing branch] chekout is used to switch branches</b
+                  >
+                </li>
+                <li>
+                  <b>git checkout -b</b> - will do present day wtever in that
+                  current branch that will be there in our new branch
+                </li>
+                <li><b> git branch </b> -to list all the branchnames</li>
+              </ol>
+            </li>
+            <li>
+              How to merge the branches in git
+              <ol>
+                mergeing branches can be done in three ways
+                <li>
+                  <b> git merge</b>: -
+                  <b> git merge branchname (whichBranch we want to merge)</b>
+                  then it will add all to the branch where we merged .git merge
+                  puts the commits on the top
+                </li>
+                <li>
+                  <b> git rebase</b> : git rebase puts the commits in a linear
+                  way puts the commits in the way files are changed.
+                </li>
+                <li>
+                  <b> git cherry-pick</b>: - it says pick the commits by
+                  <b> git cherry-pick commitId</b> will add to the branch where
+                  we are. when we have more commitdIDs then it is better to use
+                  git merge or git rebase
+                </li>
+                <li>
+                  <b>git conflit</b> -means same lines of code modified in both
+                  files so by checking which code we have to kept
+                </li>
+              </ol>
+            </li>
+            <li>difference between git merge vs git rebase</li>
+            <li>
+              <b> git log --oneline</b> or
+              <b> git log [branchname] --oneline</b> -to see only commits in
+              singleline
+            </li>
+            <ol>some more git faqs
+                <li>Is Git is distributed or Centralised version control system? what is the difference between them?</li>
+                <li>What are the Git commands that you use  to commit changes to remote repository ? - <b> git add filename,git commit,git push</b></li>
+                <li>Difference between Git fetch and git pull? 
+                    <ol>
+                        <li>git fetch :to see the latest changes done but does not update.</li>
+                        <li>git pull :do the same and update the changes</li>
+                    </ol> 
+                </li>
+                <li>difference between git merge and git rebase?</li>
+                <li>difference between .git and .gitignore?
+                    <br>
+                    .git contain all the things in the form of objects
+                    <br>
+                    .gitignore contain which files we want ignore the files
+                </li>
+                <li>what are the pre-commit hooks and post-commit hooks ?
+                    <ol>
+                        <li>hook : you want to perform something after or something before commit  </li>
+                        <li>pre-commit hook</li>
+                        <li>post-commit hook</li>
+                    </ol>
+                </li>
+                <li>What is webhook :used to perform after an action </li>
+                <li>How to pull or push changes to git</li>
+                <li>** what is git stash and talk about its use cases? -temporly saving the code</li>
+                <li>Difference between git clone and git fork ?</li>
+                <li>what is cherry-pick in git</li>
+                <li>how to amend a commit in git? <br>
+                amend means to add something to the existing one ie to fix the broken commit</li>
+                <li>how do you reslove a merge conflict in git ?</li>
+                <li></li>
+            </ol>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>
