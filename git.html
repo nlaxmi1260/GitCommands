@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git and GitHub</title>
+</head>
+<body>
+    <div>
+       <h2>Git and GitHub</h2>
+       <ol>The fundamental core concept of git & Github is <b>version control system </b> . use of vcs
+        <li> <b>Shareing of code </b> :through git</li>
+        <li> <b>Versioning </b> :to check the previous code or you want to implement other features. <br>Through github we can share copy of repo</li>
+        <li>Git is opensource.
+        GitHub build on git to add more features to git. <br>
+        Gitlab,Bigbucket build on git to add more features </li>
+        <li>GitHub is a  Distributed vcs : we can create a copy of system called fork </li>
+        <li>To create git repo first we hv to install git with homebrew. homebrew    is   a package manager.  
+         </li>
+         <li>git fork :create a copy of entire source code repo</li>
+         <li>List some of the git commands
+                <ol>
+                    <li><b> $ brew install git - gui </b> -to install git gui</li>
+                    <li><b> git </b> -to check weather git is installed or not</li>
+                    <li> <b>git init </b> ->to create empty git repo 
+                    <ol>if we delete the .git file then
+                        <li>git will not track entire folder or git will not watch entire system
+                        </li>
+                        <li>.git contains <b>HEAD,config ,hooks,objects,refs</b></li>
+                        <li>refs ,objects are used  to track every file that we create inside git</li>
+                        <li>hooks are used to prevent unconditionally doing things</li>
+                        <li>config is used to configure git  and secure</li>
+                    </ol>
+                </li>
+                    <ol>Three essetial git commands devops engineer have to learn are :
+                        <li>lifecycle of git : git add filename , git commit,git push</li>
+                        <li> <b> git add filename </b> -to track the file</li>
+                        <li><b>git diff </b> -to tells exact changes what we have made</li>
+                        <li><b> git commit -m " what we modified"</b> -what change we have done is commited </li>
+                        <li><b>git stages: modified,tracked ,untracked</b></li>
+                        <li>git status : it is used to track file versions</li>
+                        <li><b> git log</b> -shows the list of versions</li>
+                        <li><b> git reset --hard commitId</b> to go to particular commit id</li>
+                        <li>using git we can swich from version to another. <br>
+                        All the changes we have done are stored in our local system. <br>
+                        So git is used for versioning of code .git is explicit.
+                     </li>
+                        <li>if we want to create a distributed system then <b>GITHUB</b> is used
+                        because of github only we can create a copy of the repo and we can fork the repo.
+                        <br>
+                        <b>github </b>:to share code with others
+                            <ol>we have to create an account in github to share the code
+                                <li>create a repo -Naga-Shell-ExapleProject</li>
+                                <li><b></b> -to push local changes to this repo</li>
+                            </ol>
+                        </li>
+                        <li> <b>Git Branching</b>
+                        <ol>git branching goal is realese new features on time and frequently
+                            <li><b> branch</b> : just saparation,once it is ready then add to the main branch up to that  it will not distrub the main branch </li>
+                            <li> good branching strategy: </li>
+                            <li>feature branch : to add any feature </li>
+                            <li>Kubernetes repository </li>
+                            <li>Branch is Seperation <br>
+                                Uber - cabs<br>
+                                Uber - bikes new feature<br>
+                                Main branch</li>
+                            <li>release branch :to delivary the application to customer and test bcoz master is kept for active </li>
+                            <li>Hotfix branch :if some critical issuse came we need to fix asap and delivar the application.it is delivar to master and release branch</li>
+                            <li>master :any brach changes should go to master branch.</li>
+                        </ol>
+                        </li>
+                    </ol>
+                </ol>
+              </li>
+    </ol>
+    </div>
+</body>
+</html>
