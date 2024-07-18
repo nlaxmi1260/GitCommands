@@ -27,7 +27,7 @@
         <tr>
             <td>$ git clone -b [branchname] [urlof the repo] <br>
             e.g. git clone -b Feature-gitCommands git@github.com:nlaxmi1260/GitCommands.git</td>
-            <td>This command is used to clone github repo with specific branchname and urloftheRepo</td>
+            <td>This command is used to clone github repo with specific branchname and urloftheRepo to the local</td>
         </tr>
         <tr>
             <td>$ git status</td>
@@ -57,7 +57,33 @@
         </tr>
         <tr>
             <td>$ git push</td>
-            <td>This command is used to push local changes to github repo</td>
+            <td>This command is used to push local changes to github repo when github repo is configured with local git. <br>
+            when github is not configured  will give an error like no configured destination. 
+            </td>
+        </tr>
+        <tr>
+            <td>$ git remote -v</td>
+            <td>This command will show the remote reference of the repository only when we configured with a repository.
+                if we didnot configure with repo then remote reference will not be shown.
+            </td>
+        </tr>
+        <tr>
+            <td>$ git remote add origin https://github.com/OWNER/REPOSITORY.git</td>
+            <td> This command <b>git remote add </b> command takes two arguments: <br>
+                A remote name, for example, origin <br>
+                A remote URL, for example, https://github.com/OWNER/REPOSITORY.git
+            </td>
+        </tr>
+        <tr>
+            <td>$ git remote -v</td>
+            <td>To Verify new remote <br>
+                origin  https://github.com/OWNER/REPOSITORY.git (fetch) <br>
+                origin  https://github.com/OWNER/REPOSITORY.git (push)
+            </td>
+        </tr>
+        <tr>
+            <td>$ git remote set-url origin git@github.com:OWNER/REPOSITORY.git</td>
+            <td>Change your remote's URL from HTTPS to SSH with the <b>git remote set-url </b> command.</td>
         </tr>
         <tr>
             <td>$ git branch</td>
@@ -72,12 +98,17 @@
             <td>This command will change from one branch to another branch.</td>
         </tr>
         <tr>
+            <td>$ g git push --set-upstream origin Feature-GitCommands</td>
+            <td>To push the current branch and set the remote as upstream </td>
+        </tr>
+
+        <tr>
             <td>$ git fetch</td>
-            <td></td>
+            <td>This command fetches the changes from remote to local</td>
         </tr>
         <tr>
-            <td>$git merge</td>
-            <td>This command</td>
+            <td>$ git merge</td>
+            <td>This command merges changes from remote to local</td>
         </tr>
         <tr>
             <td>$ git rebase</td>
@@ -85,31 +116,40 @@
         </tr>
         <tr>
             <td>$ git stash</td>
-            <td></td>
+            <td>This command is used to stash the commited changes </td>
         </tr>
         <tr>
-            <td>git branch</td>
-            <td></td>
+            <td>$ git stash list</td>
+            <td>This command lists stashed commit IDs </td>
         </tr>
         <tr>
-            <td>git checkout [branchName]</td>
-            <td></td>
+            <td>$ git stash apply</td>
+            <td>This command applies the stashed commitId to modified</td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
+            <td>$ git checkout [branchName]</td>
+            <td>This command checkout to the given branchName</td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
+            <td>$ git branch -d [branchname]</td>
+            <td>This command deletes the given branchname if already merged</td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
+            <td>$ git branch -D [branchname]</td>
+            <td>This command  forcefully deletes the given branchname which is not merged</td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
+            <td>$ git pull </td>
+            <td>This command fetches and merges the remote changes to the local repo</td>
+        </tr>
+        <tr>
+            <td>$ git init</td>
+            <td>This command is used to inialise empty git repo in local,which is used to track the changes
+                ,for logging and every change  </td>
+        </tr>
+        <tr>
+            <td> $ ls -a</td>
+            <td> in .git folder  hooks folder  will be there, which is used for not sending the  secure info to git.</td>
         </tr>
     </table>
 </body>
