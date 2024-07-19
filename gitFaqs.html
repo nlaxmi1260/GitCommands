@@ -68,42 +68,44 @@
         <li>
           <b> git clone or pull code from github to local macine </b>
           <ol>
-            git clone means clone the code from github to localmechine
+                  git clone means clone the code from github to localmechine
+                  <li>
+                    in the remote repository go to code option select <b> ssh</b> copy
+                    the url
+                    <ol>
+                      option to download either in
+                      <b> ssh,cli,https</b>
+                      <li>
+                        https - <b> git clone https url </b> to clone to localrepo
+                        <ol>
+                          it will ask github passwords
+                          <li>we have to give and authenticate</li>
+                        </ol>
+                      </li>
+                      <li>
+                        ssh -authenticate with public key
+                        <ol>
+                          to generate a public key in cmd
+                          <li><b>ssh -keygen -t rsa</b></li>
+                          <li>
+                            go to github accout ->settings ->ssh and gps keys ->paste
+                            the publickey ->give a name
+                          </li>
+                          <li>it will clone the remoterepo</li>
+                        </ol>
+                      </li>
+                      <li>cli</li>
+                    </ol>
+                  </li>
+                  <li>
+                    in cli <b> git clone urlOfTheRepo </b> - from remoterepository is
+                    downloaded in the local mechine
+                  </li>
+                  <li><b> git remote -v</b> shows the remote reference of repo</li>
+          </ol>
+        </li>
             <li>
-              in the remote repository go to code option select <b> ssh</b> copy
-              the url
-              <ol>
-                option to download either in
-                <b> ssh,cli,https</b>
-                <li>
-                  https - <b> git clone https url </b> to clone to localrepo
-                  <ol>
-                    it will ask github passwords
-                    <li>we have to give and authenticate</li>
-                  </ol>
-                </li>
-                <li>
-                  ssh -authenticate with public key
-                  <ol>
-                    to generate a public key in cmd
-                    <li><b>ssh -keygen -t rsa</b></li>
-                    <li>
-                      go to github accout ->settings ->ssh and gps keys ->paste
-                      the publickey ->give a name
-                    </li>
-                    <li>it will clone the remoterepo</li>
-                  </ol>
-                </li>
-                <li>cli</li>
-              </ol>
-            </li>
-            <li>
-              in cli <b> git clone urlOfTheRepo </b> - from remoterepository is
-              downloaded in the local mechine
-            </li>
-            <li><b> git remote -v</b> shows the remote reference of repo</li>
-            <li>
-              what is the difference between git clone and git fork?
+             <b> ** what is the difference between git clone and git fork? </b>
               <ol>
                 git is a distibuted system that can be done using forking
                 mechanism
@@ -116,34 +118,37 @@
                 </li>
               </ol>
             </li>
-            <li>
-              how to add new feature to the git?
+            <li> <b>
+              How to add new feature to the git? </b>
               <ol>
-                <li>to create new branch - <b> git branch branchName </b></li>
+                <li> To create new branch  -> <b> git branch branchName </b>
+                </li>
                 <li>
-                  to change from one branch to other brach -
+                  To change from one branch to other brach -
                   <b> git checkout branchnameToWhichBranchToGo</b>
                 </li>
                 <li>
-                  to create and checkout to that branch -
+                   To create and checkout to that branch -
                   <b>
                     git chekout -b branchname [creates new branch and clone
                     existing branch] chekout is used to switch branches</b
                   >
                 </li>
                 <li>
-                  <b>git checkout -b</b> - will do present day wtever in that
+                  <b>git checkout -b </b> -> will do present day wtever in that
                   current branch that will be there in our new branch
                 </li>
-                <li><b> git branch </b> -to list all the branchnames</li>
+                <li> 
+                  <b> git branch </b>  ->to list all the branchnames
+                </li>
               </ol>
             </li>
             <li>
-              How to merge the branches in git
+               <b>How to merge the branches in git </b>
               <ol>
                 mergeing branches can be done in three ways
                 <li>
-                  <b> git merge</b>: -
+                  <b> git merge </b>: -
                   <b> git merge branchname (whichBranch we want to merge)</b>
                   then it will add all to the branch where we merged .git merge
                   puts the commits on the top
